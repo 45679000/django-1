@@ -1,0 +1,7 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+{% for art in f_article %}
+    <h1>Full article {{art.title}}</h1>
+{% endfor %}
+{% endblock %}

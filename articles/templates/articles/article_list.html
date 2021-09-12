@@ -1,0 +1,17 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+        <h1>Your list of articles</h1>
+        <div class="articles">
+            {% for article in stories%}
+                <div class="article">
+                    <h1><a href="#">{{article.title}}</a></h1>
+                    <p>{{article.snippet}}</p>
+                    <p>{{article.date}}</article></p>
+                    <p>{{article.id}}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <img src="{% static 'images/rainbow.jpg' %}" alt="">
+        <script src="{% static 'main.js' %}" async defer></script>
+{% endblock %}
